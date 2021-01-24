@@ -70,31 +70,29 @@ button{
 	}
 }*/
 .bg{
-	position:relative;
+	position: relative;
+}
+.bg::after{
+	content:"";
+	position:absolute;
+	top:0;
+	left:0;
 	height:80vh;
 	width:100%;
 	background:linear-gradient(135deg, #cacaca, #1a1a1a);
+
+	/*background: linear-gradient(-135deg, #91349d, #dc329b);
+*/
 }
-.wave{
-	position:absolute;
-	width:100%;
-	height:100%;
-}
-.wave span{
-	position: absolute;
-	border-radius: 10px;
-}
-.wave span:nth-child(1){
-	width: 100%;
-	height:200px;
-}
+
 .bg .hero{
 	position: relative;
 	z-index:1;
 }
 .btn-gr{
 	background: linear-gradient(to right, #91349d, #dc329b);
-}
+
+	}
 .btn-primary{
 	background:#e50838;
 }
@@ -116,11 +114,10 @@ a{
 
 header .container{
 	display: flex;
-	padding : 10px 15px;
 	align-items: center;
 }
 .logo{
-	font-size: 24px;
+	font-size: 26px;
 	font-weight:bold;
 	flex-basis: 20%;
 	font-family:Poppins;
@@ -449,18 +446,29 @@ nav{
 .slideRek{
 	display: flex;
 	align-items: center;
-	margin: 0 -10px 0 -10px;
+	margin: 0 -15px 0 -15px;
 	overflow-x: scroll;
 	overflow-y: hidden; 
 	width:560px;
-	padding:15px 0 25px 0;
+	padding:15px 0 50px 0;
 
-}
+	-ms-overflow-style: none;  /* IE and Edge */
+ 	scrollbar-width: none;  /* Firefox */}
 .slideRek a{
 	margin:10px;
 	position:relative;
 	width: 150px;
 	height: 150px;
+}
+.slideRek a p{
+	text-transform: uppercase;
+	padding:10px;
+	color:black;
+	align-items: center;
+	display: flex;
+}
+.slideRek a p i{
+	padding:0 10px;
 }
 .slideRek a::before{
 	position: absolute;
@@ -469,8 +477,8 @@ nav{
 	left:0;
 	width: 100%;
 	height: 100%;
-	filter:blur(25px);
-	transform: translateY(30px) scale(0.8, 0.9);
+	filter:blur(20px);
+	transform: translateY(20px) scale(0.8,0.9);
 }
 .slideRek a img{
 	width:150px;
@@ -529,4 +537,55 @@ nav{
 		margin-left: -15px;
 		padding-right:15px;
 	}
+}
+
+footer{
+	background:linear-gradient(135deg, #666, #1a1a1a);
+
+}
+footer .container{
+	padding:25px 15px 15px;
+	color:white;
+}
+
+.newsletter{
+	flex-grow:1;
+	margin-top: 10px;
+}
+.newsletter p{
+	padding:5px 0 15px;
+	text-align: left;
+}
+.newsletter form{
+	width:100%;
+	margin:0 auto;
+}
+
+.subfoot{
+	display:flex;	
+	margin-left:-15px;
+	margin-right:-15px;
+	margin:34px 0;
+}	
+.footnav,.follow{
+	flex-grow:1;
+	margin:15px;
+}
+
+.follow a, .footnav a{
+	display: block;
+}
+.follow i{
+	margin-right: 15px;
+}
+.subfoot h2{
+	margin-bottom: 15px;
+}
+
+footer .end{
+	text-align: center;
+}
+footer .end i{
+	color:red;
+	margin:0 5px;
 }
