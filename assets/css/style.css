@@ -11,64 +11,26 @@ body,html{
 	font-family: Poppins;
 	font-size: 16px;
 }
-
+h1,h2,h3{
+	font-family: PlayFair;
+	font-weight: bold;
+}
+h1{font-size:42px;}
+h2{font-size:32px;}
+@media(max-width:480px){
+	h1{font-size: 32px;}
+	h2{font-size:24px;}
+}
 button{
 	border:none;}
 .btn{
-	font-size:14px;
-	padding:10pt 15px;
+	font-size:15px;
+	padding:10pt 20px;
 	cursor:pointer;
 	display: inline-block;
 	color:white;
-	border-radius: 5px;
+	border-radius: 10px;
 }
-/*.bg{
-	position: relative;
-	height:100vh;
-	overflow-x: hidden;
-}
-.wave{
-	position: absolute;
-	left:0;
-	width:100%;
-	height:100%;
-	background:#4973ff;
-}
-.wave span{
-	position: absolute;
-	width:325vh;
-	height:325vh;
-	top:0;
-	left:0;
-	transform: translate(-50%,-75%);
-	background:#000;
-}
-.wave span:nth-child(1){
-	animation: wave 5s linear infinite;
-	border-radius:5%;
-	background:rgba(20,20,20,0.2);
-	transform: translate(-50%,-50%) rotate(0deg);
-}
-.wave span:nth-child(2){
-	animation: wave 10s linear infinite;
-	border-radius:5%;
-	background:rgba(20,20,20,0.2);
-	transform: translate(-70%,-85%) rotate(0deg);
-}
-.wave span:nth-child(3){
-	animation: wave 10s linear infinite;
-	border-radius:50px;
-	background:rgba(20,20,20,0.3);
-	transform: translate(-80%,-96%) rotate(0deg);
-}
-@keyframes waver{
-	0%{
-		transform: translate(-50%,-75%) rotate(0deg);
-	}
-	100%{
-		transform: translate(-50%,-75%) rotate(360deg);
-	}
-}*/
 .bg{
 	position: relative;
 }
@@ -286,7 +248,7 @@ nav{
 .hero .left img{
 	width:100%;
 	height:500px;
-	border-radius: 10px;
+	border-radius: 15px;
 	position: relative;
 	filter: brightness(70%);
 }
@@ -307,14 +269,15 @@ nav{
 	left:0;
 	color:white;
 	padding:25px;
+	padding-left: 35px;
 }
 .desc h4{
 	font-weight: normal;
 	position:relative;
 	display: inline-block;
+	text-transform: uppercase;
 }
 .desc h1{
-	font-family: Poppins;
 	margin-bottom:25px;
 }
 .desc div{
@@ -343,11 +306,16 @@ nav{
 	margin:0 15px;
 }
 .toggleSlide i:hover,
-.toggleSlide span:hover{
+.toggleSlide span:hover,
+.slideRek a p:hover{
 	transform: scale(2);
 	transition:0.5s;
 	margin:0 10px;
-}	
+}
+.slideRek a p:hover{
+	transform: scale(1.1);
+	transition:0.5s;
+}
 .toggleSlide span{
 	width:15px;
 	height:15px;
@@ -462,7 +430,7 @@ nav{
 }
 .slideRek a p{
 	text-transform: uppercase;
-	padding:10px;
+	padding:12px;
 	color:black;
 	align-items: center;
 	display: flex;
@@ -550,30 +518,35 @@ footer .container{
 
 .newsletter{
 	flex-grow:1;
-	margin-top: 10px;
+	margin-right: 50px;
 }
 .newsletter p{
-	padding:5px 0 15px;
+	padding-bottom:5px;
 	text-align: left;
 }
 .newsletter form{
-	width:100%;
-	margin:0 auto;
+	width:90%;
+	margin:15px -5px 0;
 }
-
+.newsletter form i{color:#e50838;font-size: 18px;}
+.subfoot .left{
+	flex-basis:50%;
+	display: flex;
+}
 .subfoot{
 	display:flex;	
 	margin-left:-15px;
 	margin-right:-15px;
 	margin:34px 0;
+	padding:0;
 }	
 .footnav,.follow{
 	flex-grow:1;
-	margin:15px;
 }
 
 .follow a, .footnav a{
 	display: block;
+	margin-top: 5px;
 }
 .follow i{
 	margin-right: 15px;
@@ -581,11 +554,33 @@ footer .container{
 .subfoot h2{
 	margin-bottom: 15px;
 }
-
-footer .end{
-	text-align: center;
-}
+footer .end{margin-top:100px;}
+footer .end{text-align: center;}
 footer .end i{
-	color:red;
+	color:#e50838;
 	margin:0 5px;
+}
+
+/*RESPONSIVE FOTER*/
+@media(max-width: 720px){
+	.subfoot{
+		display: block;
+	}
+	.newsletter{margin-bottom: 50px;margin-right:0;}
+	.newsletter, .newsletter p{
+		text-align: center;
+	}
+	.newsletter form{
+		width:80%;
+		margin:15px auto;
+	}
+	.footnav, .follow{
+		flex-basis: 50%;
+	}
+}
+
+@media(max-width: 480px){
+	footer .end{
+		margin-top:50px;
+	}
 }
