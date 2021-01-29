@@ -486,6 +486,7 @@ nav{
 	.slideRek{
 		width:100%;
 		padding:25px;
+                Padding-bottom:80px;
 		text-align: center;
 	}
 	.rek{
@@ -503,7 +504,7 @@ nav{
 	.slideRek{
 		width: 360px;
 		margin-left: -15px;
-		padding-right:15px;
+		padding-right:-15px;
 	}
 }
 
@@ -583,4 +584,12 @@ footer .end i{
 	footer .end{
 		margin-top:50px;
 	}
+}
+@media(max-width:280px){
+.newsletter form{
+ margin:15px 0;
+.newsletter form input{
+
+}
+ }
 }
