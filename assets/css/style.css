@@ -174,7 +174,7 @@ nav{
 }
 
 /*RESPONSIVE NAVBAR*/
-@media(max-width: 720px){
+@media(max-width: 780px){
 	nav{
 		position: fixed;
 		display: none;
@@ -470,9 +470,15 @@ nav{
 }
 /*RESPONSIVE HERO*/
 
-@media(max-width: 720px){
+@media(max-width: 780px){
+	.container{
+		padding:15px 25px;
+	}
 	.hero .container{
 	display: block;
+	}
+	.bg::after{
+		height:50vh;
 	}
 	.hero .right{
 		margin-top: 25px;
@@ -485,12 +491,7 @@ nav{
 	}
 	.slideRek{
 		width:100%;
-		padding:25px;
-                Padding-bottom:80px;
 		text-align: center;
-	}
-	.rek{
-		justify-content: center;
 	}
 }
 
@@ -504,7 +505,7 @@ nav{
 	.slideRek{
 		width: 360px;
 		margin-left: -15px;
-		padding-right:-15px;
+		padding-right:15px;
 	}
 }
 
@@ -513,7 +514,7 @@ footer{
 
 }
 footer .container{
-	padding:25px 15px 15px;
+	padding:25px 15px 0;
 	color:white;
 }
 
@@ -549,13 +550,13 @@ footer .container{
 	display: block;
 	margin-top: 5px;
 }
-.follow i{
+.follow i, .footnav i{
 	margin-right: 15px;
 }
 .subfoot h2{
 	margin-bottom: 15px;
 }
-footer .end{margin-top:100px;}
+footer .end{margin-top:100px;padding:10px;border-top:1px solid #f6f6f6;}
 footer .end{text-align: center;}
 footer .end i{
 	color:#e50838;
@@ -563,7 +564,7 @@ footer .end i{
 }
 
 /*RESPONSIVE FOTER*/
-@media(max-width: 720px){
+@media(max-width: 780px){
 	.subfoot{
 		display: block;
 	}
@@ -584,12 +585,8 @@ footer .end i{
 	footer .end{
 		margin-top:50px;
 	}
-}
-@media(max-width:280px){
-.newsletter form{
- margin:15px 0;
-.newsletter form input{
 
-}
- }
+	.subfoot .left{
+		display: block;
+	}
 }
